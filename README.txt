@@ -81,7 +81,7 @@ Understood the importance of setting up the description of each tool, the expect
 You will need:
 
 ```bash
-git clone https://github.com/[your-username]/ai-engineering-portfolio.git
+git clone https://github.com/mikeong1604-dot/ai-engineering-portfolio.git
 cd ai-engineering-portfolio
 # Each project has its own requirements.txt
 ```
