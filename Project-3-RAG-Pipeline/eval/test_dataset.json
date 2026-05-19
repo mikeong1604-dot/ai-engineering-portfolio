@@ -1,0 +1,44 @@
+[
+  {
+    "id": "q001",
+    "question": "How many months of expenses should i keep as part of my emergency fund?",
+    "ground_truth": "3 to 6 months",
+    "category": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q002",
+    "question": "What is the maximum amount of my income I should spend on insurance?",
+    "ground_truth": "15%",
+    "category": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q003",
+    "question": "If i have $10,000 as my annual income, how much insurance protection should i have for Death & Total Permanent Disability?",
+    "ground_truth": "$90,000",
+    "category": "reasoning",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q004",
+    "question": "What percentage of my monthly income should i invest for growth?",
+    "ground_truth": "10%",
+    "category": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q005",
+    "question": "What does legacy planning involve?",
+    "ground_truth": "A will, CPF Nomination, A lasting power of attorney, An Advance Care Plan",
+    "category": "factual",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q006",
+    "question": "What is the best rule for sleep?",
+    "ground_truth": "Get 7-9 hours of sleep per night",
+    "category": "error_analysis",
+    "difficulty": "hard"
+  }
+]

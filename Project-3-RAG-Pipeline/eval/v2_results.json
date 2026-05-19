@@ -1,0 +1,68 @@
+[
+  {
+    "factual_correctness": 3,
+    "groundedness": 3,
+    "completeness": 3,
+    "total": 9,
+    "reasoning": "Factual correctness: The RAG agent's answer is factually correct, accurately stating 3 to 6 months as the standard recommendation and 12 months for irregular income, which matches both the model answer and the source context. Groundedness: All information provided by the RAG agent is directly supported by the context, including the 3-6 months guideline, the 12-month recommendation for irregular income, and the tip about separating essentials from good-to-haves. Completeness: The RAG agent not only answers the core question (3-6 months) but also provides additional relevant context such as the special case for irregular income and how to calculate the emergency fund amount, making the answer more complete than the model answer.",
+    "question": "How many months of expenses should i keep as part of my emergency fund?",
+    "ground_truth": "3 to 6 months",
+    "system_answer": "Based on the provided document, you should set aside at least 3 to 6 months' worth of expenses as your emergency fund. However, if your income is irregular, you should aim to have savings equivalent to 12 months of expenses. To calculate this amount, you should compile all your household and personal expenses in a month, including loan repayments, credit card bills, insurance premiums, and taxes. A useful tip is to separate the essentials from the good-to-haves when budgeting.",
+    "prompt_version": "v2"
+  },
+  {
+    "factual_correctness": 3,
+    "groundedness": 3,
+    "completeness": 3,
+    "total": 9,
+    "reasoning": "Factual correctness: The model answer correctly states 15% as the maximum amount of income to spend on insurance, which matches the context. Groundedness: The answer is fully supported by the context, which explicitly states 'Spend at most 15% of income on insurance protection' with the caveat about bundled products. Completeness: The model answer captures all key elements including the 15% limit, the CPF deduction note, and the exception for bundled products like Whole Life Insurance.",
+    "question": "What is the maximum amount of my income I should spend on insurance?",
+    "ground_truth": "15%",
+    "system_answer": "Based on the provided document, you should spend **at most 15% of your income on insurance protection**. This is calculated after deducting your CPF contributions.\n\nHowever, there is an important exception to note: if you purchase **bundled products such as Whole Life Insurance**, you may exceed the 15% limit, as these products contain both investment and protection elements.",
+    "prompt_version": "v2"
+  },
+  {
+    "factual_correctness": 3,
+    "groundedness": 3,
+    "completeness": 3,
+    "total": 9,
+    "reasoning": "Factual correctness: The RAG agent's answer of $90,000 (9x annual income of $10,000) is factually correct and matches the model answer exactly. The recommendation of 9x annual income for Death & Total Permanent Disability is directly supported by the context from the Life Insurance Association of Singapore guidelines. Groundedness: The answer is fully grounded in the provided context, which explicitly states '9x annual income for death and total permanent disability' and references the Life Insurance Association of Singapore. The additional note about spending at most 15% of income on insurance protection is also directly from the context. Completeness: The RAG agent's answer is complete, providing the specific dollar amount ($90,000), the multiplier used (9x), the source of the recommendation, and an additional relevant note about the 15% income limit on insurance protection spending, which adds useful context without being excessive.",
+    "question": "If i have $10,000 as my annual income, how much insurance protection should i have for Death & Total Permanent Disability?",
+    "ground_truth": "$90,000",
+    "system_answer": "Based on the Basic Financial Planning Guide, the recommended coverage for Death & Total Permanent Disability is **9x your annual income**.\n\nTherefore, if your annual income is $10,000, you should have insurance protection coverage of **$90,000** (9 x $10,000) for Death & Total Permanent Disability.\n\nNote that this recommendation is based on guidelines from the Life Insurance Association of Singapore, and you are advised to spend at most 15% of your income (after deducting CPF contributions) on insurance protection.",
+    "prompt_version": "v2"
+  },
+  {
+    "factual_correctness": 3,
+    "groundedness": 3,
+    "completeness": 3,
+    "total": 9,
+    "reasoning": "Factual correctness: The RAG agent correctly states 10% of income (after CPF deductions) should be invested, which matches both the model answer and the source document. Groundedness: All claims are directly supported by the context, including the 10% figure, the investment options mentioned, and the retirement planning advice. Completeness: The RAG agent not only answers the core question (10%) but also provides additional relevant context about investment options and retirement planning, making it a thorough and complete response.",
+    "question": "What percentage of my monthly income should i invest for growth?",
+    "ground_truth": "10%",
+    "system_answer": "Based on the Basic Financial Planning Guide, you should **invest at least 10% of your income** (after deducting CPF contributions) for retirement and other financial goals.\n\nFor investment options, the guide recommends considering:\n- **Short-term**: Singapore Savings Bonds, T-bills, Fixed Deposits\n- **Long-term**: Topping up your CPF retirement savings, Exchange Traded Funds (ETFs), Unit Trusts\n\nAdditionally, it is important to note that you should also **start your retirement planning early**, as compounding interest on CPF top-ups to your Special/Retirement Account can help grow your retirement savings significantly over time.",
+    "prompt_version": "v2"
+  },
+  {
+    "factual_correctness": 3,
+    "groundedness": 3,
+    "completeness": 3,
+    "total": 9,
+    "reasoning": "Factual correctness: The model answer correctly identifies all four components of legacy planning (A will, CPF Nomination, A Lasting Power of Attorney, An Advance Care Plan), which matches the context and RAG agent answer exactly. Groundedness: All four elements listed in the model answer are directly supported by the context, which explicitly states these as the components of legacy planning. Completeness: The model answer covers all four key components mentioned in the context. While the RAG agent provides additional detail about what each component does, the model answer captures all the essential elements without omitting any.",
+    "question": "What does legacy planning involve?",
+    "ground_truth": "A will, CPF Nomination, A lasting power of attorney, An Advance Care Plan",
+    "system_answer": "Legacy planning involves four key components:\n\n1. **A Will** - Sets out your instructions on how you want your estate to be distributed after your death.\n\n2. **A CPF Nomination** - Allows you to decide how your CPF savings will be distributed when you pass on.\n\n3. **A Lasting Power of Attorney** - Lets you appoint one or more people you trust to act and make decisions on your behalf should you lose mental capacity.\n\n4. **An Advance Care Plan** - Sets out your wishes for future health and personal care.\n\nYou can learn more and get a step-by-step guide on the My Legacy portal at go.gov.sg/legacyplan.",
+    "prompt_version": "v2"
+  },
+  {
+    "factual_correctness": 1,
+    "groundedness": 0,
+    "completeness": 0,
+    "total": 1,
+    "reasoning": "Factual correctness: The model answer of '7-9 hours of sleep per night' is generally accepted medical advice and is not factually wrong, earning a minimal score. However, it is not relevant to the context provided. Groundedness: The model answer is not grounded in the provided context at all, as the context is entirely about financial planning in Singapore and contains no information about sleep. The RAG agent correctly identified that the information was not available in the document. Completeness: Since the question about sleep rules is completely outside the scope of the provided document, the answer cannot be considered complete in context, and the RAG agent's response of 'not available in the provided document' is actually the more appropriate answer given the context.",
+    "question": "What is the best rule for sleep?",
+    "ground_truth": "Get 7-9 hours of sleep per night",
+    "system_answer": "This information is not available in the provided document.",
+    "prompt_version": "v2"
+  }
+]

@@ -1,0 +1,9 @@
+ticker,company_name,sector,market_cap_sgd_billions,pe_ratio,dividend_yield_pct,revenue_growth_pct
+D05.SI,DBS Group Holdings,Banking,98.3,11.2,5.8,12.3
+OCBC.SI,OCBC Bank,Banking,54.7,9.8,5.2,8.7
+UOB.SI,United Overseas Bank,Banking,47.2,10.1,5.5,9.1
+S68.SI,Singapore Exchange,Financial Services,12.4,22.3,3.1,6.2
+GS,Goldman Sachs,Banking,185.2,15.3,2.1,18.4
+JPM,JPMorgan Chase,Banking,742.1,12.8,2.3,22.1
+GRAB,Grab Holdings,Technology,15.3,0,0,24.7
+SE,Sea Limited,Technology,48.2,0,0,31.2
