@@ -12,6 +12,7 @@ load_dotenv()
 model = SentenceTransformer('all-MiniLM-L6-v2')
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 chroma_client = chromadb.PersistentClient(path=str(CHROMA_PATH)) # Set up persistent ChromaDB client with a local directory for storage
+file_path = BASE_DIR/ "document.pdf"
 def create_collection(name: str): # Only need to create client and collection once.
     collection = chroma_client.create_collection(name)
  #Set up persistent ChromaDB client with a local directory for storage
@@ -70,8 +71,10 @@ def store_chunks(chunks: list[str], embeddings: list[list[float]]):
 
 
 #create_collection("Financial_Planning")
-#collection = chroma_client.get_collection(name="Financial_Planning") # Get the collection you created
-#print(collection.get())
+collection = chroma_client.get_collection(name="Financial_Planning") # Get the collection you created
+result = collection.get(include=["embeddings", "documents"])
+print(result["embeddings"][0][:5])
+#text = extract_text(file_path)
 #chunks = chunk_text(text,5000,500)
 #embeddings = embed_chunks(chunks)
 #store_chunks(chunks, embeddings)
