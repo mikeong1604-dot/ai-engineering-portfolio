@@ -29,6 +29,7 @@ def run_agent(user_question: str, max_iterations: int = 10) -> str:
      If you get back an error response from any tools saying the ticker is invalid, show the error message to the user and ask him to input a valid ticker"""
     for iteration in range(max_iterations):
         print(f"\n--- Iteration {iteration + 1} ---")
+        print(message)
         try:
             response = client.messages.create(
             model="claude-sonnet-4-6",
@@ -44,21 +45,19 @@ def run_agent(user_question: str, max_iterations: int = 10) -> str:
             return response.content[0].text
         elif response.stop_reason == "tool_use":
             message.append({"role":"assistant","content": response.content})
-            print(response.content)
+            tool_message = []
             for i in response.content:
                 if i.type == "tool_use": # You need to loop through all, as there can be multiple tool_use types of responses in one iteration
                     tool_id = i.id
                     tool_name = i.name
                     tool_input = i.input
-                    print(tool_name,tool_input)
+                    #print(tool_name,tool_input)
                     tool_result = functions[tool_name](**tool_input)
-                    print(tool_result)
-                    tool_result = str(tool_result)
-                    new_message = {"role":"user", "content": [
-                        {"type":"tool_result", "tool_use_id":tool_id, "content": tool_result},
-                    ]}
-                    message.append(new_message)
-
+                    #print(tool_result)
+                    tool_result = json.dumps(tool_result)
+                    new_message = {"type":"tool_result", "tool_use_id":tool_id, "content": tool_result}
+                    tool_message.append(new_message)
+            message.append({"role":"user","content":tool_message})
            
                 
         
@@ -83,5 +82,5 @@ def run_agent(user_question: str, max_iterations: int = 10) -> str:
     return "Max iterations reached without final answer"
 
 if __name__ == "__main__":
-    result = run_agent("What is the current price of Micron stock?",10)
+    result = run_agent("Get me DBS current and previous price, compare the P/E between the two",10)
     print(f"\nFinal answer: {result}")
